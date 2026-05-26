@@ -768,9 +768,47 @@
   /* ─── EXPERIENCE STACK ─── */
   #experience {
     padding: 0;
-    background: var(--bg);
     position: relative;
   }
+
+  .experience-bg{
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  z-index: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(7,16,25,0.82),
+      rgba(7,16,25,0.68),
+      rgba(7,16,25,0.95)
+    ),
+    url("./Images/Cocina.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: .9;
+
+  transform: scale(1.05);
+
+  filter: blur(2px) brightness(.75);
+
+  pointer-events: none;
+}
+
+  .stack-sticky-viewport{
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
   .experience-intro {
     padding: 160px 48px 80px;
     max-width: 1400px; margin: 0 auto;
