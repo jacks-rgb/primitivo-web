@@ -766,15 +766,18 @@
   .press-card.featured .press-quote { font-size: 26px; }
 
   /* ─── EXPERIENCE STACK ─── */
-  #experience {
-    padding: 0;
-    position: relative;
-  }
 
-  .experience-bg{
+#experience{
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  background: #071019;
+}
+
+/* INTRO BACKGROUND IMAGE */
+.experience-bg{
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
 
   width: 100%;
   height: 100vh;
@@ -788,7 +791,7 @@
       rgba(7,16,25,0.68),
       rgba(7,16,25,0.95)
     ),
-    url("./Images/Cocina.png");
+    url("../Images/Cocina.png");
 
   background-size: cover;
   background-position: center;
@@ -798,46 +801,74 @@
 
   transform: scale(1.05);
 
-  filter: blur(2px) brightness(.75);
+  filter:
+    blur(2px)
+    brightness(.75);
 
   pointer-events: none;
+
+  will-change:
+    transform,
+    opacity;
 }
 
-  .stack-sticky-viewport{
+/* INTRO */
+.experience-intro{
   position: relative;
-  overflow: hidden;
-  min-height: 100vh;
+  z-index: 2;
+
+  padding: 160px 48px 80px;
+
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-  .experience-intro {
-    padding: 160px 48px 80px;
-    max-width: 1400px; margin: 0 auto;
-  }
-  .exp-eyebrow {
-    font-size: 10px; letter-spacing: 0.4em;
-    text-transform: uppercase; color: var(--warm);
-    margin-bottom: 24px;
-  }
-  .exp-title {
-    font-family: 'Ballard', 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-size: clamp(64px, 9vw, 140px);
-    line-height: 0.9;
-    letter-spacing: 0.01em;
-  }
+.exp-eyebrow{
+  font-size: 10px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--warm);
 
-  /* The scroll-driven stack container */
-  .stack-scroll-trigger {
-    /* 4 × 100vh: 1 intro + 3 cards */
-    height: 400vh;
-    position: relative;
-  }
-  .stack-sticky-viewport {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    overflow: hidden;
-  }
+  margin-bottom: 24px;
+}
+
+.exp-title{
+  font-family: 'Ballard', 'Cormorant Garamond', serif;
+  font-style: italic;
+
+  font-size: clamp(64px, 9vw, 140px);
+
+  line-height: 0.9;
+  letter-spacing: 0.01em;
+
+  position: relative;
+  z-index: 2;
+}
+
+/* SCROLL AREA */
+.stack-scroll-trigger{
+  position: relative;
+  height: 400vh;
+}
+
+/* STICKY VIEWPORT */
+.stack-sticky-viewport{
+  position: sticky;
+  top: 0;
+
+  height: 100vh;
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  z-index: 1;
+}
+
+/* CARDS ABOVE BG */
+.stack-card{
+  position: relative;
+  z-index: 2;
+}
 
   /* All three cards live inside the sticky viewport, stacked via transform */
   .stack-card {
