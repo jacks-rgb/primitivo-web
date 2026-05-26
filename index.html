@@ -390,14 +390,59 @@
   .marquee-item:hover .marquee-item-inner { transform: scale(1.05); }
 
   /* Simulated cinematic images with CSS */
-  .img-fire { background: radial-gradient(ellipse at 50% 80%, #ff6b35 0%, #c0392b 30%, #1a0a0a 70%); }
-  .img-kitchen { background: linear-gradient(135deg, #1a0a0a 0%, #4a1520 40%, #2d1008 100%); }
-  .img-cocktail { background: radial-gradient(ellipse at 30% 70%, #8B5E52 0%, #120909 60%); }
-  .img-beach { background: linear-gradient(180deg, #c0853a 0%, #7a4a20 40%, #120909 100%); }
-  .img-candles { background: radial-gradient(ellipse at 60% 40%, #d4a047 0%, #6b2030 40%, #080505 80%); }
-  .img-plating { background: linear-gradient(225deg, #c4b09a 0%, #4a1520 50%, #120909 100%); }
-  .img-smoke { background: radial-gradient(ellipse at 50% 50%, #3d2b2b 0%, #120909 80%); }
-  .img-sunset { background: linear-gradient(180deg, #c0853a 0%, #8B2020 40%, #120909 100%); }
+  .img-kitchen {
+  background-image: url('./Images/marquee-Kitchen.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+ .img-fire {
+  background-image: url('./Images/IMG_1545.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+  .img-cocktail {
+  background-image: url('./Images/IMG_1556.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.img-beach {
+  background-image: url('./Images/IMG_1563.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.img-candles {
+  background-image: url('./Images/marquee-candelight.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.img-plating {
+  background-image: url('./Images/IMG_1534.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.img-smoke {
+  background-image: url('./Images/IMG_1557.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.img-sunset {
+  background-image: url('./Images/Marquee-people.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
   .marquee-label {
     position: absolute; bottom: 12px; left: 16px;
@@ -766,105 +811,40 @@
   .press-card.featured .press-quote { font-size: 26px; }
 
   /* ─── EXPERIENCE STACK ─── */
+  #experience {
+    padding: 0;
+    background: var(--bg);
+    position: relative;
+  }
+  .experience-intro {
+    padding: 160px 48px 80px;
+    max-width: 1400px; margin: 0 auto;
+  }
+  .exp-eyebrow {
+    font-size: 10px; letter-spacing: 0.4em;
+    text-transform: uppercase; color: var(--warm);
+    margin-bottom: 24px;
+  }
+  .exp-title {
+    font-family: 'Ballard', 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(64px, 9vw, 140px);
+    line-height: 0.9;
+    letter-spacing: 0.01em;
+  }
 
-#experience{
-  padding: 0;
-  position: relative;
-  overflow: hidden;
-
-  /* IMPORTANTE */
-  background: transparent;
-}
-
-/* ─── BACKGROUND IMAGE ─── */
-
-.experience-bg{
-  position: absolute;
-  inset: 0;
-
-  width: 100%;
-  height: 100%;
-
-  z-index: 0;
-
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(7,16,25,0.72),
-      rgba(7,16,25,0.55),
-      rgba(7,16,25,0.82)
-    ),
-    url("../Images/Cocina.png");
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  opacity: .9;
-
-  /* TEMPORALMENTE SIN EFECTOS */
-  transform: none;
-  filter: none;
-
-  pointer-events: none;
-}
-
-/* ─── INTRO ─── */
-
-.experience-intro{
-  position: relative;
-  z-index: 2;
-
-  padding: 160px 48px 80px;
-
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.exp-eyebrow{
-  font-size: 10px;
-  letter-spacing: 0.4em;
-  text-transform: uppercase;
-
-  color: var(--warm);
-
-  margin-bottom: 24px;
-}
-
-.exp-title{
-  font-family: 'Ballard', 'Cormorant Garamond', serif;
-  font-style: italic;
-
-  font-size: clamp(64px, 9vw, 140px);
-
-  line-height: 0.9;
-  letter-spacing: 0.01em;
-
-  position: relative;
-  z-index: 2;
-}
-
-/* ─── SCROLL AREA ─── */
-
-.stack-scroll-trigger{
-  position: relative;
-
-  /* puedes ajustar luego */
-  height: 200vh;
-}
-
-/* ─── STICKY VIEWPORT ─── */
-
-.stack-sticky-viewport{
-  position: sticky;
-  top: 0;
-
-  height: 100%;
-
-  overflow: hidden;
-
-  z-index: 1;
-}
+  /* The scroll-driven stack container */
+  .stack-scroll-trigger {
+    /* 4 × 100vh: 1 intro + 3 cards */
+    height: 400vh;
+    position: relative;
+  }
+  .stack-sticky-viewport {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+  }
 
   /* All three cards live inside the sticky viewport, stacked via transform */
   .stack-card {
@@ -1285,7 +1265,7 @@
     <li><a href="#journal">Journal</a></li>
     <li><a href="#press">Press</a></li>
   </ul>
-  <a href="https://wa.me/529842058619" target="_blank" class="nav-reserve">Reserve</a>
+  <a href="https://wa.me/521234567890" target="_blank" class="nav-reserve">Reserve</a>
 </nav>
 
 <!-- ─── HERO ─── -->
@@ -1304,7 +1284,7 @@
     </h1>
     <p class="hero-sub">Contemporary Mexican cuisine rooted in tradition, shaped by intention — in the heart of Holbox. A place you seek out, not stumble into.</p>
     <div class="hero-ctas">
-      <a href="https://wa.me/529842058619" target="_blank" class="btn-primary"><span>Reserve Your Table</span></a>
+      <a href="https://wa.me/521234567890" target="_blank" class="btn-primary"><span>Reserve Your Table</span></a>
       <a href="#experience" class="btn-ghost">Explore The Experience</a>
     </div>
   </div>
@@ -1381,22 +1361,42 @@
         </p>
         <div class="about-cta gsap-fade-up" data-delay="0.4">
           <span class="about-cta-label">Ready to experience it?</span>
-          <a href="https://wa.me/529842058619" target="_blank" class="btn-primary magnetic-btn"><span>Reserve Your Evening</span></a>
+          <a href="https://wa.me/521234567890" target="_blank" class="btn-primary magnetic-btn"><span>Reserve Your Evening</span></a>
         </div>
       </div>
       <div class="about-composition gsap-parallax-images">
         <div class="about-comp-item">
-          <div class="about-comp-inner" style="background: radial-gradient(ellipse at 50% 60%, #c0392b 0%, #4a1520 40%, #1a0a0a 80%);"></div>
-          <span class="about-comp-label">Open Kitchen</span>
-        </div>
-        <div class="about-comp-item">
-          <div class="about-comp-inner" style="background: linear-gradient(135deg, #d4a047 0%, #4a1520 50%, #120909 100%);"></div>
-          <span class="about-comp-label">Ingredients</span>
-        </div>
-        <div class="about-comp-item">
-          <div class="about-comp-inner" style="background: radial-gradient(ellipse at 40% 40%, #c0853a 0%, #2d1008 80%);"></div>
-          <span class="about-comp-label">Fire & Smoke</span>
-        </div>
+  <div class="about-comp-inner"
+       style="
+       background-image: url('./Images/IMG_1545.jpg');
+       background-size: cover;
+       background-position: center;
+       ">
+  </div>
+  <span class="about-comp-label">Open Kitchen</span>
+</div>
+
+<div class="about-comp-item">
+  <div class="about-comp-inner"
+       style="
+       background-image: url('./Images/IMG_1534.jpg');
+       background-size: cover;
+       background-position: center;
+       ">
+  </div>
+  <span class="about-comp-label">Ingredients</span>
+</div>
+
+<div class="about-comp-item">
+  <div class="about-comp-inner"
+       style="
+       background-image: url('./Images/IMG_1557.jpg');
+       background-size: cover;
+       background-position: center;
+       ">
+  </div>
+  <span class="about-comp-label">Fire & Smoke</span>
+</div>
       </div>
     </div>
   </div>
@@ -1464,7 +1464,7 @@
 
     <div class="dishes-ctas gsap-fade-up" style="margin-top: 64px;">
       <a href="#" class="btn-dark magnetic-btn">View Full Menu</a>
-      <a href="https://wa.me/529842058619" target="_blank" class="btn-outline-dark magnetic-btn">Reserve on WhatsApp</a>
+      <a href="https://wa.me/521234567890" target="_blank" class="btn-outline-dark magnetic-btn">Reserve on WhatsApp</a>
     </div>
   </div>
 </section>
@@ -1483,7 +1483,7 @@
       <span class="res-eyebrow">Book a Table</span>
       <h2 class="res-title">Limited<br>Seats.<br>By Design.</h2>
       <p class="res-text">Primitivo seats a limited number of guests each night — by design. Reserve early, arrive unhurried, and give yourself the time this experience deserves.</p>
-      <a href="https://wa.me/529842058619" target="_blank" class="btn-primary magnetic-btn"><span>Reserve on WhatsApp</span></a>
+      <a href="https://wa.me/521234567890" target="_blank" class="btn-primary magnetic-btn"><span>Reserve on WhatsApp</span></a>
     </div>
   </div>
 </section>
@@ -1534,16 +1534,12 @@
 <section id="experience">
   <div class="experience-intro">
     <p class="exp-eyebrow gsap-fade-up">The Experience</p>
-    <h2 class="exp-title gsap-split-title" id="expTitle">
-      Three acts.<br>One evening.
-    </h2>
+    <h2 class="exp-title gsap-split-title" id="expTitle">Three acts.<br>One evening.</h2>
   </div>
 
+  <!-- scroll trigger: 100vh intro already consumed above; 3 cards × 100vh each = 300vh scrolling space -->
   <div class="stack-scroll-trigger" id="stackTrigger">
     <div class="stack-sticky-viewport" id="stackViewport">
-
-      <!-- BACKGROUND INTRO -->
-      <div class="experience-bg"></div>
 
       <!-- CARD 1 -->
       <div class="stack-card card-1" id="sCard1">
@@ -1673,7 +1669,7 @@
   </h2>
   <p class="cta-sub">A table designed to make you stay.</p>
   <div class="cta-buttons">
-    <a href="https://wa.me/529842058619" target="_blank" class="btn-primary"><span>Reserve Now</span></a>
+    <a href="https://wa.me/521234567890" target="_blank" class="btn-primary"><span>Reserve Now</span></a>
     <a href="https://instagram.com/primitivoholbox" target="_blank" class="btn-ghost">Follow on Instagram</a>
   </div>
 </section>
@@ -1703,7 +1699,7 @@
       <p class="footer-col-title">Contact</p>
       <ul>
         <li><a href="mailto:info@primitivo.mx">info@primitivo.mx</a></li>
-        <li><a href="https://wa.me/529842058619" target="_blank">WhatsApp</a></li>
+        <li><a href="https://wa.me/521234567890" target="_blank">WhatsApp</a></li>
         <li><a href="https://instagram.com/primitivoholbox" target="_blank">Instagram</a></li>
       </ul>
     </div>
@@ -1712,7 +1708,7 @@
     <p class="footer-copy">© 2025 Primitivo Holbox. All rights reserved.</p>
     <div class="footer-social">
       <a href="https://instagram.com/primitivoholbox" target="_blank">Instagram</a>
-      <a href="https://wa.me/529842058619" target="_blank">WhatsApp</a>
+      <a href="https://wa.me/521234567890" target="_blank">WhatsApp</a>
       <a href="mailto:info@primitivo.mx">Email</a>
     </div>
   </div>
@@ -1970,17 +1966,6 @@
 
     // ── EXPERIENCE INTRO TITLE ──
     splitAndAnimate(document.getElementById('expTitle'), { stagger: 0.022, duration: 1.1 });
-
-    gsap.to(".experience-bg", {
-  opacity: 0,
-  scale: 1,
-  scrollTrigger: {
-    trigger: "#sCard1",
-    start: "top 80%",
-    end: "top 30%",
-    scrub: true
-  }
-});
 
     // ── EXPERIENCE EYEBROW ──
     const expEyebrow = document.querySelector('#experience .exp-eyebrow');
