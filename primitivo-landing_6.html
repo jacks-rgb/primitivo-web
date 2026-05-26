@@ -1469,12 +1469,16 @@
 <section id="experience">
   <div class="experience-intro">
     <p class="exp-eyebrow gsap-fade-up">The Experience</p>
-    <h2 class="exp-title gsap-split-title" id="expTitle">Three acts.<br>One evening.</h2>
+    <h2 class="exp-title gsap-split-title" id="expTitle">
+      Three acts.<br>One evening.
+    </h2>
   </div>
 
-  <!-- scroll trigger: 100vh intro already consumed above; 3 cards × 100vh each = 300vh scrolling space -->
   <div class="stack-scroll-trigger" id="stackTrigger">
     <div class="stack-sticky-viewport" id="stackViewport">
+
+      <!-- BACKGROUND INTRO -->
+      <div class="experience-bg"></div>
 
       <!-- CARD 1 -->
       <div class="stack-card card-1" id="sCard1">
@@ -1901,6 +1905,17 @@
 
     // ── EXPERIENCE INTRO TITLE ──
     splitAndAnimate(document.getElementById('expTitle'), { stagger: 0.022, duration: 1.1 });
+
+    gsap.to(".experience-bg", {
+  opacity: 0,
+  scale: 1,
+  scrollTrigger: {
+    trigger: "#sCard1",
+    start: "top 80%",
+    end: "top 30%",
+    scrub: true
+  }
+});
 
     // ── EXPERIENCE EYEBROW ──
     const expEyebrow = document.querySelector('#experience .exp-eyebrow');
