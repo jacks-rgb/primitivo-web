@@ -812,9 +812,10 @@
 
   /* ─── EXPERIENCE STACK ─── */
   #experience {
-    padding: 0;
-    background: var(--bg);
-    position: relative;
+     padding: 0;
+  position: relative;
+  overflow: hidden;
+   background: transparent;
   }
   .experience-intro {
     padding: 160px 48px 80px;
@@ -832,7 +833,30 @@
     line-height: 0.9;
     letter-spacing: 0.01em;
   }
+.experience-bg{
+  position: absolute;
+  inset: 0;
 
+  width: 100%;
+  height: 100%;
+
+  z-index: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(7,16,25,0.72),
+      rgba(7,16,25,0.55),
+      rgba(7,16,25,0.82)
+    ),
+    url("../Images/Cocina.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: .9;
+}
   /* The scroll-driven stack container */
   .stack-scroll-trigger {
     /* 4 × 100vh: 1 intro + 3 cards */
