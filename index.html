@@ -171,9 +171,7 @@
   .hero-bg {
     position: absolute; inset: 0;
     background:
-      radial-gradient(ellipse at 60% 40%, rgba(74,21,32,0.5) 0%, transparent 60%),
-      radial-gradient(ellipse at 20% 80%, rgba(139,94,82,0.2) 0%, transparent 50%),
-      linear-gradient(180deg, rgba(14,8,8,0.3) 0%, rgba(14,8,8,0.7) 60%, rgba(14,8,8,0.95) 100%);
+      background-image: url("/Images/Banner\ -\ Escritorio\ 2.jpg");
     z-index: 1;
   }
   .hero-cinematic-bg {
@@ -184,17 +182,13 @@
   .hero-cinematic-bg::before {
     content: '';
     position: absolute; inset: -20%;
-    background:
-      radial-gradient(ellipse 80% 60% at 65% 35%, rgba(139,50,30,0.35) 0%, transparent 60%),
-      radial-gradient(ellipse 50% 70% at 10% 90%, rgba(74,21,32,0.4) 0%, transparent 50%),
-      radial-gradient(ellipse 40% 40% at 85% 75%, rgba(180,100,50,0.15) 0%, transparent 50%);
+    background-image: url("/Images/Banner\ -\ Escritorio\ 2.jpg");
     animation: heroAmbient 8s ease-in-out infinite alternate;
   }
   .hero-cinematic-bg::after {
     content: '';
     position: absolute; inset: 0;
-    background:
-      repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 4px);
+    background-image: url("/Images/Banner\ -\ Escritorio\ 2.jpg");
   }
   @keyframes heroAmbient {
     0% { transform: scale(1) rotate(0deg); opacity: 0.8; }
