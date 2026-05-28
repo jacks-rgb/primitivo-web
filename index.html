@@ -162,34 +162,34 @@
   .nav-reserve:hover { background: var(--warm); color: var(--beige); }
 
   /* ─── HERO ─── */
-  #hero {
-    position: relative;
-    height: 100vh; min-height: 700px;
-    display: flex; align-items: flex-end;
-    overflow: hidden;
-  }
-  .hero-bg {
-    position: absolute; inset: 0;
-    background:
-      background-image: url("/Images/Banner\ -\ Escritorio\ 2.jpg");
-    z-index: 1;
-  }
-  .hero-cinematic-bg {
-    position: absolute; inset: 0;
-    background-image: url("/Images/Banner\ -\ Escritorio\ 2.jpg");
-    overflow: hidden;
-  }
-  .hero-cinematic-bg::before {
-    content: '';
-    position: absolute; inset: -20%;
-    background-image: url("/Images/Banner\ -\ Escritorio\ 2.jpg");
-    animation: heroAmbient 8s ease-in-out infinite alternate;
-  }
-  .hero-cinematic-bg::after {
-    content: '';
-    position: absolute; inset: 0;
-    background-image: url("/Images/Banner\ -\ Escritorio\ 2.jpg");
-  }
+#hero {
+  position: relative;
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("/Images/Banner - Escritorio 2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.hero-cinematic-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("/Images/Banner - Escritorio 2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
   @keyframes heroAmbient {
     0% { transform: scale(1) rotate(0deg); opacity: 0.8; }
     100% { transform: scale(1.05) rotate(1deg); opacity: 1; }
